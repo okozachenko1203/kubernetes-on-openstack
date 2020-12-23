@@ -1,20 +1,17 @@
 variable username {
   description = "OpenStack username used by cluster controller manager components to authenticate to the OpenStack API"
   type        = string
-  default     = "okozachenko"
 }
 
 variable password {
   description = "OpenStack password used by cluster controller manager components to authenticate to the OpenStack API"
   type        = string
-  default     = ")518OpenK10S~"
 }
 
 variable domain_name {
   # https://www.terraform.io/docs/providers/openstack/#domain_name
   description = "The OpenStack domain name of the project, this cluster lives in"
   type        = string
-  default = "Default"
 }
 
 variable user_domain_name {
@@ -28,37 +25,27 @@ variable tenant_name {
   # https://www.terraform.io/docs/providers/openstack/#tenant_name
   description = "The OpenStack project name this cluster lives in"
   type        = string
-  default = "workspace-okozachenko"
 }
 
 variable project_id {
   description = "The ID of the OpenStack project this cluster lives in"
   type        = string
-  default     = "7d9c8dc3734742b8a329c22b5c78bab3"
 }
 
 variable auth_url {
   description = "The URL of the keystone authentication endpoint"
   type        = string
-  default     = "https://auth.vexxhost.net/"
 }
 
 variable "cloud_region" {
   description = "Region name in the cloud"
   type = string
-  default = "sjc1"
 }
 
 variable ssh_pub_key {
   description = "The ssh public key used for SSH session of the user"
   type        = string
   default     = "~/.ssh/id_rsa.pub"
-}
-
-variable region {
-  description = "The name of the OpenStack region this cluster will live in"
-  type        = string
-  default     = "sjc1"
 }
 
 variable flavor {
@@ -70,7 +57,6 @@ variable flavor {
 variable cluster_name {
   description = "The name of the cluster"
   type        = string
-  default = "osh"
 }
 
 variable node_count {
@@ -119,7 +105,6 @@ variable cluster_network_node_cidr {
 variable "cluster_network_router_id" {
   description = "The cluster private node network will be attached to this router"
   type        = string
-  default = "39e707a6-de3b-4b30-b3e3-bb8ad4fb93a4"
 }
 
 variable "master_data_volume_size" {
@@ -149,5 +134,4 @@ variable "image_visibility" {
 variable "vms_image_id" {
   description = "OS image for nodes"
   type = string
-  default = "338b5153-a173-4d35-abfd-c0aa9eaec1d7"
 }
